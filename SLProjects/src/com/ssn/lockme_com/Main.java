@@ -8,37 +8,44 @@ public class Main {
 		
 		Scanner s=new Scanner(System.in);
 		System.out.println("Welcome to LockedMe.com, choose the number to perform the operation of your choice : ");
-		String menu = (" 1. Add a file "+"\n"+" 2. Delete a file "+"\n"+" 3. Read a file "+ "\n"+" 4. Show all the files "+"\n"+" 5. Search a file "+"\n"+" 6. Exit");
-		int c;
+		String menu = ("\n A. Add a file "+"\n"+" B. Delete a file "+"\n"+" C. Read a file "+ "\n"+" D. Search a file "+"\n"+" E. Exit"+"\n\n");
+		String menu_=("\n1. Show Files"+"\n"+"2. User operations"+"\n"+"3. Exit"+"\n");
+		int c;String ch;
 		do {
-			System.out.println(menu);
+			System.out.println(menu_);
 			c=s.nextInt();
 			switch(c) {
-			case 1 : 
-				System.out.println("Please enter the filename to add : ");
-				AddFile.addFile();
-				break;
-			case 2 :
-				System.out.println("Enter the file name to delete : ");
-				DeleteFile.deleteFile();
-				break;
-			case 3 :
-				System.out.println("Enter the file name to read it's content : ");
-				ReadFile.readFile();
-				break;
-			case 4 :
-				ShowFiles.showFiles();
-				break;
-			case 5 :
-				System.out.println("Enter the file name to search in the DB : ");
-				SearchFile.search();
-				break;
-			case 6 : 
-				     System.exit(0);
-				     
-			default : 
-				System.out.println("Invalid Input");
-		}
+			case 1: ShowFiles.showFiles();
+					break;
+			case 2: System.out.println(menu);
+					ch=s.next().toUpperCase();
+					switch(ch){
+						case "A" : 
+							System.out.println("Please enter the filename to add : ");
+							AddFile.addFile();
+							break;
+						case "B" :
+							System.out.println("Enter the file name to delete : ");
+							DeleteFile.deleteFile();
+							break;
+						case "C" : 
+							System.out.println("Enter the file name to read it's content : ");
+							ReadFile.readFile();
+							break;
+						case "D" :
+							System.out.println("Enter the file name to search in the DB : ");
+							SearchFile.search();
+							break;
+						case "E" : 
+							System.exit(0);  
+						default : 
+							System.out.println("Invalid Input");
+							
+					}
+					break;
+			case 3: System.exit(0);
+			default: System.out.println("Invalid input");
+			}
 		}while(c!=7);
 	}
 

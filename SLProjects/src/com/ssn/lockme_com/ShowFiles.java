@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class ShowFiles {
+	
 	public static void showFiles() {
 		File dir = new File(".");
 		if(dir.isDirectory())
@@ -19,7 +20,7 @@ public class ShowFiles {
 	        }
 	      };
 	      files = dir.listFiles(fileFilter);
-	      Arrays.sort(files, new Comparator()
+	      Arrays.sort(files, new Comparator<Object>()
 	      {
 	        @Override
 	        public int compare(Object f1, Object f2) {
