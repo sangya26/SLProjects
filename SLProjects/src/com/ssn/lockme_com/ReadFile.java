@@ -16,8 +16,7 @@ public class ReadFile {
 		    	System.out.print((char) i);
 		    }
 		catch (IOException e) {
-		      System.out.println("An error occurred.");
-		      e.printStackTrace();
+		      System.out.println("An error occurred. No such file found. ");
 		   }
 	}
 }

@@ -46,7 +46,7 @@ public class Main {
 			case 3: System.exit(0);
 			default: System.out.println("Invalid input");
 			}
-		}while(c!=7);
+		}while(c!=4);
 	}
 
 }
