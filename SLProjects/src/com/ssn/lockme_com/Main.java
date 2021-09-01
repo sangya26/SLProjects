@@ -11,6 +11,7 @@ public class Main {
 		String menu = ("\n A. Add a file "+"\n"+" B. Delete a file "+"\n"+" C. Read a file "+ "\n"+" D. Search a file "+"\n"+" E. Exit"+"\n\n");
 		String menu_=("\n1. Show Files"+"\n"+"2. User operations"+"\n"+"3. Exit"+"\n");
 		int c;String ch;
+		
 		do {
 			System.out.println(menu_);
 			c=s.nextInt();
@@ -19,6 +20,7 @@ public class Main {
 					break;
 			case 2: System.out.println(menu);
 					ch=s.next().toUpperCase();
+					
 					switch(ch){
 						case "A" : 
 							System.out.println("Please enter the filename to add : ");
@@ -37,13 +39,13 @@ public class Main {
 							SearchFile.search();
 							break;
 						case "E" : 
-							System.exit(0);  
+							return;  
 						default : 
 							System.out.println("Invalid Input");
 							
 					}
 					break;
-			case 3: System.exit(0);
+			case 3: return;
 			default: System.out.println("Invalid input");
 			}
 		}while(c!=4);

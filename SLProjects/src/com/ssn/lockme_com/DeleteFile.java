@@ -16,9 +16,10 @@ public class DeleteFile {
 			e.printStackTrace();
 		}
 	    if (name) { 
-	      System.out.println("Deleted the file: " + obj.getName());
+	    	if(obj.delete())
+	    		System.out.println("Deleted the file: " + obj.getName());
 	    } else {
-	      System.out.println("Failed to delete the file.");
+	      System.out.println("Failed to delete the file as file doesnot exists.");
 	    } 
 	}
 	
