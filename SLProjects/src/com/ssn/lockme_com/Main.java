@@ -7,7 +7,8 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Scanner s=new Scanner(System.in);
-		System.out.println("Welcome to LockedMe.com, choose the number to perform the operation of your choice : ");
+		System.out.println("Welcome to LockedMe.com \nDeveloper:- Sangya Sagareeka Nayak\n");
+		System.out.println("Choose the number to perform the operation of your choice : ");
 		String menu = ("\n A. Add a file "+"\n"+" B. Delete a file "+"\n"+" C. Read a file "+ "\n"+" D. Search a file "+"\n"+" E. Exit"+"\n\n");
 		String menu_=("\n1. Show Files"+"\n"+"2. User operations"+"\n"+"3. Exit"+"\n");
 		int c;String ch;
